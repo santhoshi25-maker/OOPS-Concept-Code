@@ -1,0 +1,51 @@
+class Vehicle {
+    private String model;  // Encapsulated field (hidden from outside)
+    private int speed;     // Encapsulated field (hidden from outside)
+
+    // Constructor to initialize Vehicle object
+    public Vehicle(String model, int speed) {
+        this.model = model;  // Constructor assigns value to encapsulated field
+        this.speed = speed;  // Constructor assigns value to encapsulated field
+    }
+
+    // Getter method for model (provides read access to private field)
+    public String getModel() {
+        return model;
+    }
+
+    // Getter method for speed (provides read access to private field)
+    public int getSpeed() {
+        return speed;
+    }
+
+    // Setter method for speed (provides controlled write access to private field)
+    public void setSpeed(int speed) {
+        if (speed > 0) {
+            this.speed = speed;
+        } else {
+            System.out.println("Speed should be positive!");
+        }
+    }
+
+    // A method to display vehicle information
+    public void displayInfo() {
+        System.out.println("Model: " + model + ", Speed: " + speed);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a Vehicle object
+        Vehicle car = new Vehicle("Tesla", 120);
+
+        // Accessing encapsulated data through getters
+        System.out.println("Car model: " + car.getModel());  // Output: Tesla
+        System.out.println("Car speed: " + car.getSpeed());  // Output: 120
+
+        // Modifying the speed through setter
+        car.setSpeed(150);  // Updates speed if valid
+
+        // Display the updated info
+        car.displayInfo();  // Output: Model: Tesla, Speed: 150
+    }
+}
