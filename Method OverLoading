@@ -1,0 +1,34 @@
+public class Main {
+    
+    // Function declaration and definition for addition of two integers
+    
+    static int addition(int num1, int num2) {
+        return num1 + num2;
+    }
+
+
+  static int addition(int num1, int num2,int num3) {
+        return num1 + num2+num3;
+    }
+
+    // Function declaration and definition for addition of two doubles
+    
+    static double addition(double num1, double num2) {
+        
+        return num1 + num2;
+    }
+
+    public static void main(String args[]) {
+        
+        // Method overloading: calling the integer addition method
+        
+        System.out.println(addition(35, 36)); // Output: 71
+        
+        System.out.println(addition(35, 36,3));
+        
+        
+
+        // Method overloading: calling the double addition method
+        System.out.println(addition(35.5, 36.6)); // Output: 72.1
+    }
+}
