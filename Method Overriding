@@ -1,0 +1,32 @@
+//Parent or Super class
+class Parent {
+public void display() {
+System.out.println("Hello, I am from parent class");
+}
+}
+
+
+//Child or sub class
+class Sub extends Parent {
+//Below method overrides the Parent display() method
+// @override
+public void display() {
+System.out.println("Hello, I am from child class");
+}
+}
+//Driver class
+
+public class Main {
+public static void main(String args[])
+{
+Parent superObject = new Parent ();
+
+superObject.display(); // Super class method is called
+
+Parent subObject = new Sub();
+
+subObject.display(); //Child class method is called by a parent type reference: this is functionality of method overriding
+
+
+}
+}
